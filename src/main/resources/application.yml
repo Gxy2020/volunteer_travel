@@ -1,0 +1,27 @@
+spring:
+  redis:
+    #配置启动redis服务的服务器ip和端口号
+    host: 127.0.0.1
+    port: 6379
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/volunteer_travel?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+  #    jdbc:mysql://127.0.0.1:3306/vol_travel?characterEncoding=utf-8&useSSl=falsed
+  jpa:
+    show-sql: true
+#    hibernate:
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    cache: false
+
+server:
+  servlet:
+    context-path: /travel
+  port: 8080
