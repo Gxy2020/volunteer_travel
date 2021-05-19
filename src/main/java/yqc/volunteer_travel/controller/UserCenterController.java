@@ -50,7 +50,11 @@ public class UserCenterController {
 
     @RequestMapping("/centerEditPW")
     @ResponseBody
-    public Result centerEditPW(HttpServletRequest request, HttpServletResponse response, Model model, @RequestParam("id") String id, @RequestParam("oldPassword") String oldPassword, @RequestParam("newPassword") String newPassword) {
+    public Result centerEditPW(HttpServletRequest request,
+                               HttpServletResponse response, Model model,
+                               @RequestParam("id") String id,
+                               @RequestParam("oldPassword") String oldPassword,
+                               @RequestParam("newPassword") String newPassword) {
         return userCenterService.centerEditPW(request, response, id, oldPassword, newPassword);
     }
 }

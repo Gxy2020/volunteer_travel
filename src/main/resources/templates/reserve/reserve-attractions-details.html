@@ -40,8 +40,8 @@
                             <p th:text="${attractions.describe}">
                             </p>
                             <div align="right" style="float:right">
-                                <button th:if="${flag == false}" th:onclick="cancelAttractionsReserve([[${attractions.id}]],'预订')"
-                                        type="button" class="btn btn-default btn-info">预订
+                                <button th:if="${flag == false}" th:onclick="cancelAttractionsReserve([[${attractions.id}]],'收藏')"
+                                        type="button" class="btn btn-default btn-info">收藏
                                 </button>
                                 <button th:if="${flag == true }" th:onclick="cancelAttractionsReserve([[${attractions.id}]],'取消预订')"
                                         type="button" class="btn btn-default btn-info">
